@@ -31,9 +31,11 @@ Je propose donc de créer un site web qui pourrait permettre avec un accès admi
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: ;\
-:heavy_check_mark: ;\
-:heavy_check_mark: ;
+:heavy_check_mark: En tant qu’utilisateur je veux accéder au site web pour y voir le planning des événements, aux partenariats, et d’autre catégorie d’informations\
+:heavy_check_mark: En tant qu’utilisateur je veux pouvoir faire une demande d’activité a l’association ou une demande de contact qui s’envoie sur le mail de l’association\
+:heavy_check_mark: En tant qu’admin je veux pouvoir instancier des activités et répondre aux demandes des utilisateurs directement sur le site\
+:heavy_check_mark: En tant que développeur je veux pouvoir lancer le site (backend, frontend) sur docker, avoir une documentation complète du code et un environnement de CI/CD complet\
+
 
 ## :rocket: Technologies ##
 
@@ -59,12 +61,9 @@ $ git clone https://github.com/MrBartou/site_bde
 $ cd site_bde
 
 # Install dependencies
-$ yarn
+$ docker-compose up
 
-# Run the project
-$ yarn start
-
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8080>
 ```
 
 ## :memo: License ##
@@ -72,7 +71,7 @@ $ yarn start
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/{{YOUR_GITHUB_USERNAME}}" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/MrBartou" target="_blank">{{YOUR_NAME}}</a> and <a href="https://github.com/huntears" target="_blank">{{YOUR_NAME}}</a> and <a href="https://github.com/Leo-Bazot" target="_blank">{{YOUR_NAME}}</a>
 
 &#xa0;
 
