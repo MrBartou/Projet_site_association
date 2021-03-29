@@ -1,9 +1,3 @@
-<div align="center" id="top">
-    <img src="./.github/app.gif" alt="Site_BDE" />&#xa0;
-
-  <!-- <a href="https://site_bde.netlify.app">Demo</a> -->
-</div>
-
 <h1 align="center">Site_BDE</h1>
 
 <p align="center">
@@ -30,33 +24,36 @@
 
 ## :dart: About ##
 
-Describe your project
+L’origine du projet vient du fait qu’on manque souvent d’informations à propos de certaines associations notamment les BDE ou BDS à Epitech.
+Ma motivation vient du fait que plus de personne aurais envie de participer aux activités des associations et d’être plus au courant des partenariats.
+Je propose donc de créer un site web qui pourrait permettre avec un accès admin de gérer toute une association pour les activités, l’économie, le planning, les partenariats, etc.
+
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
+:heavy_check_mark: ;\
+:heavy_check_mark: ;\
+:heavy_check_mark: ;
 
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Expo](https://expo.io/)
-- [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [TypeScript](https://www.typescriptlang.org/)
+- [Svelte JS](https://expo.io/)
+- [Python](https://nodejs.org/en/)
+- [Django](https://pt-br.reactjs.org/)
+- [Docker](https://reactnative.dev/)
+- [Github Action](https://www.typescriptlang.org/)
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Node](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Docker](https://nodejs.org/en/) installed.
 
 ## :checkered_flag: Starting ##
 
 ```bash
 # Clone this project
-$ git clone https://github.com/{{YOUR_GITHUB_USERNAME}}/site_bde
+$ git clone https://github.com/MrBartou/site_bde
 
 # Access
 $ cd site_bde
