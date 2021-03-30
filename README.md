@@ -28,6 +28,11 @@ L’origine du projet vient du fait qu’on manque souvent d’informations à p
 Ma motivation vient du fait que plus de personne aurais envie de participer aux activités des associations et d’être plus au courant des partenariats.
 Je propose donc de créer un site web qui pourrait permettre avec un accès admin de gérer toute une association pour les activités, l’économie, le planning, les partenariats, etc.
 
+## :dart: DÉMO ##
+
+```bash
+    bde-epitech-tls.fr
+```
 
 ## :sparkles: Features ##
 
@@ -41,15 +46,15 @@ Je propose donc de créer un site web qui pourrait permettre avec un accès admi
 
 The following tools were used in this project:
 
-- [Svelte JS](https://expo.io/)
-- [Python](https://nodejs.org/en/)
-- [Django](https://pt-br.reactjs.org/)
-- [Docker](https://reactnative.dev/)
-- [Github Action](https://www.typescriptlang.org/)
+- [Svelte JS](https://svelte.dev)
+- [Python](https://www.python.org)
+- [Django](https://www.djangoproject.com)
+- [Docker](https://www.docker.com)
+- [Github Action](https://github.com/features/actions)
 
 ## :white_check_mark: Requirements ##
 
-Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Docker](https://nodejs.org/en/) installed.
+Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) and [Docker](https://www.docker.com) installed.
 
 ## :checkered_flag: Starting ##
 
