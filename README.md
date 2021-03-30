@@ -25,7 +25,7 @@
 ## :dart: About ##
 
 L’origine du projet vient du fait qu’on manque souvent d’informations à propos de certaines associations notamment les BDE ou BDS à Epitech.
-Ma motivation vient du fait que plus de personne aurais envie de participer aux activités des associations et d’être plus au courant des partenariats.
+Ma motivation vient du fait que plus de personne aurais envie de participer aux activités des associations et d’être plus au courant des partenariats. 
 Je propose donc de créer un site web qui pourrait permettre avec un accès admin de gérer toute une association pour les activités, l’économie, le planning, les partenariats, etc.
 
 ## :dart: DÉMO ##
