@@ -71,7 +71,9 @@ $ docker-compose up
 This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
 
 
-Made with :heart: by <a href="https://github.com/MrBartou" target="_blank">{{YOUR_NAME}}</a> and <a href="https://github.com/huntears" target="_blank">{{YOUR_NAME}}</a> and <a href="https://github.com/Leo-Bazot" target="_blank">{{YOUR_NAME}}</a>
+Made with :heart: by <a href="https://github.com/MrBartou" target="_blank">Anthony DENIN</a> 
+and <a href="https://github.com/huntears" target="_blank">Alexandre Flion</a> and 
+<a href="https://github.com/Leo-Bazot" target="_blank">Léo Bazot</a>
 
 &#xa0;
 
