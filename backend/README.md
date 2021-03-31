@@ -15,7 +15,7 @@
 
 ## :dart: About ##
 
-Partie Backend du site des assos
+Backend part of the assos website
 
 ## :sparkles: Features ##
 

@@ -1,4 +1,4 @@
-<h1 align="center">Site_BDE</h1>
+<h1 align="center">Projet_site_association</h1>
 
 <p align="center">
     <img alt="Github top language" src="https://img.shields.io/github/languages/top/MrBartou/site_bde?color=56BEB8">
@@ -8,7 +8,7 @@
 </p>
 <!-- Status -->
 
-<h4 align="center">🚧  Site_BDE 🚀 Under construction...  🚧</h4>
+<h4 align="center">🚧  Projet_site_association 🚀 Under construction...  🚧</h4>
 <hr>
 
 <p align="center">
@@ -23,11 +23,9 @@
 <br>
 
 ## :dart: About ##
-
-L’origine du projet vient du fait qu’on manque souvent d’informations à propos de certaines associations notamment les BDE ou BDS à Epitech.
-Ma motivation vient du fait que plus de personne aurais envie de participer aux activités des associations et d’être plus au courant des partenariats. 
-Je propose donc de créer un site web qui pourrait permettre avec un accès admin de gérer toute une association pour les activités, l’économie, le planning, les partenariats, etc.
-
+The origin of the project comes from the fact that we often lack information about certain associations including BDE or BDS at Epitech.
+My motivation comes from the fact that more people would like to participate in the activities of associations and to be more aware of partnerships.
+I therefore propose to create a website that could allow administrative access to manage an entire association for activities, economy, planning, partnerships, etc.
 ## :dart: DÉMO ##
 
 ```bash
@@ -36,10 +34,10 @@ Je propose donc de créer un site web qui pourrait permettre avec un accès admi
 
 ## :sparkles: Features ##
 
-:heavy_check_mark: En tant qu’utilisateur je veux accéder au site web pour y voir le planning des événements, aux partenariats, et d’autre catégorie d’informations\
-:heavy_check_mark: En tant qu’utilisateur je veux pouvoir faire une demande d’activité a l’association ou une demande de contact qui s’envoie sur le mail de l’association\
-:heavy_check_mark: En tant qu’admin je veux pouvoir instancier des activités et répondre aux demandes des utilisateurs directement sur le site\
-:heavy_check_mark: En tant que développeur je veux pouvoir lancer le site (backend, frontend) sur docker, avoir une documentation complète du code et un environnement de CI/CD complet\
+:heavy_check_mark: As a user I want to access the website to see the schedule of events, partnerships, and other category of information \
+:heavy_check_mark: As a user, I want to be able to make an activity request to the association or a contact request that is sent to the association's email\
+:heavy_check_mark: As an admin I want to be able to instantiate activities and respond to user requests directly on the site\
+:heavy_check_mark: As a developer I want to be able to launch the site (backend, frontend) on docker, have full code documentation and a complete CI / CD environment\
 
 
 ## :rocket: Technologies ##

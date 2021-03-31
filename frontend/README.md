@@ -15,7 +15,7 @@
 
 ## :dart: About ##
 
-Partie Frontend du site des assos
+Front-end part of the assos website
 
 ## :sparkles: Features ##
 
@@ -27,8 +27,8 @@ Partie Frontend du site des assos
 
 The following tools were used in this project:
 
-- [Svelt JS]()
-- [Javascript]()
+- [Svelt JS](https://svelte.dev)
+- [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - [Docker](https://www.docker.com)
 
 ## :white_check_mark: Requirements ##
