@@ -58,7 +58,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 
 ```bash
 # Clone this project
-$ git clone https://github.com/MrBartou/site_bde
+$ git clone git@github.com:MrBartou/Projet_site_association.git
 
 # Access
 $ cd site_bde
@@ -71,7 +71,7 @@ $ docker-compose up
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license GPL-3.0 License. For more details, see the [LICENSE](LICENSE.md) file.
 
 
 Made with :heart: by <a href="https://github.com/MrBartou" target="_blank">Anthony DENIN</a> 
