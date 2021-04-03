@@ -17,17 +17,11 @@
 
 Front-end part of the assos website
 
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
-
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
 
-- [Angular JS]()
+- [Angular JS](https://angular.io)
 - [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - [Docker](https://www.docker.com)
 
@@ -52,7 +46,7 @@ $ npm run dev
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from GPL-3.0 License. For more details, see the [LICENSE](LICENSE.md) file.
 
 
 Made with :heart: by <a href="https://github.com/MrBartou" target="_blank">Anthony DENIN</a> 

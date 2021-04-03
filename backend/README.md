@@ -17,12 +17,6 @@
 
 Backend part of the assos website
 
-## :sparkles: Features ##
-
-:heavy_check_mark: Feature 1;\
-:heavy_check_mark: Feature 2;\
-:heavy_check_mark: Feature 3;
-
 ## :rocket: Technologies ##
 
 The following tools were used in this project:
@@ -52,7 +46,7 @@ $ python app.py
 
 ## :memo: License ##
 
-This project is under license from MIT. For more details, see the [LICENSE](LICENSE.md) file.
+This project is under license from GPL-3.0 License. For more details, see the [LICENSE](LICENSE.md) file.
 
 
 Made with :heart: by <a href="https://github.com/MrBartou" target="_blank">Anthony DENIN</a> 

@@ -44,7 +44,7 @@ I therefore propose to create a website that could allow administrative access t
 
 The following tools were used in this project:
 
-- [Svelte JS](https://svelte.dev)
+- [Angular JS](https://angular.io)
 - [Python](https://www.python.org)
 - [Django](https://www.djangoproject.com)
 - [Docker](https://www.docker.com)
