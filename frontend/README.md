@@ -27,7 +27,7 @@ Front-end part of the assos website
 
 The following tools were used in this project:
 
-- [Svelt JS](https://svelte.dev)
+- [Angular JS]()
 - [Javascript](https://developer.mozilla.org/fr/docs/Web/JavaScript)
 - [Docker](https://www.docker.com)
 
