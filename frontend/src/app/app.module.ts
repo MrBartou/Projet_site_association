@@ -9,12 +9,23 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HeaderComponent } from './shared/header/header.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { EvenementComponent } from './page/evenement/evenement.component';
+import { PartenariatComponent } from './page/partenariat/partenariat.component';
+import { EquipeComponent } from './page/equipe/equipe.component';
+import { ContactComponent } from './page/contact/contact.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     HeaderComponent,
+    EvenementComponent,
+    PartenariatComponent,
+    EquipeComponent,
+    ContactComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
@@ -22,7 +33,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     RoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    NgbModule
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

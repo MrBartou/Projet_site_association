@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
 import { MatListModule } from '@angular/material/list'
 import { FlexLayoutModule } from '@angular/flex-layout'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [],
@@ -18,7 +19,8 @@ import { FlexLayoutModule } from '@angular/flex-layout'
         MatIconModule,
         MatButtonModule,
         MatListModule,
-        FlexLayoutModule
+        FlexLayoutModule,
+        FontAwesomeModule
     ],
     exports: [
         MatTabsModule,
