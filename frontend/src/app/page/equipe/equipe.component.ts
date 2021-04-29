@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-equipe',
@@ -6,6 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./equipe.component.scss']
 })
 export class EquipeComponent implements OnInit {
+
+  faFacebook = faFacebook;
+  faInstagram = faInstagram;
+  faGithub = faGithub;
+  faMailBulk = faMailBulk;
 
   constructor() { }
 
