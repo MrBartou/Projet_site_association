@@ -15,6 +15,9 @@ import { EquipeComponent } from './page/equipe/equipe.component';
 import { ContactComponent } from './page/contact/contact.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     BrowserAnimationsModule,
     MaterialModule,
     NgbModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    AppRoutingModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
