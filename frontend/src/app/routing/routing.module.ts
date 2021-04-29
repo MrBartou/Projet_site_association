@@ -6,6 +6,7 @@ import { EvenementComponent } from '../page/evenement/evenement.component';
 import { PartenariatComponent } from '../page/partenariat/partenariat.component';
 import { EquipeComponent } from '../page/equipe/equipe.component';
 import { ContactComponent } from '../page/contact/contact.component';
+import { Page404Component } from '../page/page404/page404.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -13,7 +14,9 @@ const routes: Routes = [
     { path: 'partenariat', component: PartenariatComponent},
     { path: 'equipe', component: EquipeComponent},
     { path: 'contact', component: ContactComponent},
-    { path:'', redirectTo: '/home', pathMatch: 'full' }
+    { path:'', redirectTo: '/home', pathMatch: 'full' },
+    { path: '404', component: Page404Component },
+    { path: '**', redirectTo: '/404' }
 ];
 
 @NgModule({

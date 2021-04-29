@@ -18,6 +18,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ReactiveFormsModule } from '@angular/forms';
+import { Page404Component } from './page/page404/page404.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     EquipeComponent,
     ContactComponent,
     FooterComponent,
+    Page404Component,
   ],
   imports: [
     BrowserModule,
