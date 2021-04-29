@@ -1,1 +1,164 @@
-<p>partenariat works!</p>
+<body>
+    <br><br>
+    <div class="container">
+        <p>
+          <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed"
+                  [attr.aria-expanded]="!isCollapsed" aria-controls="collapseExample">
+            Nourriture
+          </button>
+        </p>
+        <div id="collapseExample" [ngbCollapse]="isCollapsed">
+            <div class="card-deck">
+                <div class="card">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                  <div class="card-body">
+                    <h2 class="card-title">Macdonald Compans Caffarelli</h2>
+                    <p class="card-text">Menu best Of à 5 euros sous présentation de la carte étudiants</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                  <div class="card-body">
+                    <h2 class="card-title">SubWay Compans Caffarelli</h2>
+                    <p class="card-text">Menu SUB30 à 7 euros sous présentation de la carte étudiants</p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <br>
+        <p>
+            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed2 = !isCollapsed2"
+                    [attr.aria-expanded]="!isCollapsed2" aria-controls="collapseExample">
+              Vêtements
+            </button>
+          </p>
+          <div id="collapseExample" [ngbCollapse]="isCollapsed2">
+              <div class="card-deck">
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">Macdonald Compans Caffarelli</h2>
+                      <p class="card-text">Menu best Of à 5 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">SubWay Compans Caffarelli</h2>
+                      <p class="card-text">Menu SUB30 à 7 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <br>
+          <p>
+            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed3 = !isCollapsed3"
+                    [attr.aria-expanded]="!isCollapsed3" aria-controls="collapseExample">
+              High-tech
+            </button>
+          </p>
+          <div id="collapseExample" [ngbCollapse]="isCollapsed3">
+              <div class="card-deck">
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">Macdonald Compans Caffarelli</h2>
+                      <p class="card-text">Menu best Of à 5 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">SubWay Compans Caffarelli</h2>
+                      <p class="card-text">Menu SUB30 à 7 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <br>
+          <p>
+            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed4 = !isCollapsed4"
+                    [attr.aria-expanded]="!isCollapsed4" aria-controls="collapseExample">
+              Musique
+            </button>
+          </p>
+          <div id="collapseExample" [ngbCollapse]="isCollapsed4">
+              <div class="card-deck">
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">Macdonald Compans Caffarelli</h2>
+                      <p class="card-text">Menu best Of à 5 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">SubWay Compans Caffarelli</h2>
+                      <p class="card-text">Menu SUB30 à 7 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                  </div>
+                </div>
+          </div>
+          <br>
+          <p>
+            <button type="button" class="btn btn-outline-primary" (click)="isCollapsed5 = !isCollapsed5"
+                    [attr.aria-expanded]="!isCollapsed5" aria-controls="collapseExample">
+              Autre
+            </button>
+          </p>
+          <div id="collapseExample" [ngbCollapse]="isCollapsed5">
+              <div class="card-deck">
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">Macdonald Compans Caffarelli</h2>
+                      <p class="card-text">Menu best Of à 5 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h2 class="card-title">SubWay Compans Caffarelli</h2>
+                      <p class="card-text">Menu SUB30 à 7 euros sous présentation de la carte étudiants</p>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <img class="card-img-top" src="https://images.unsplash.com/photo-1481349518771-20055b2a7b24?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1409&q=80" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                    </div>
+                  </div>
+                </div>
+          </div><br>
+    </div>
+</body>

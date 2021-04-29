@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PartenariatComponent implements OnInit {
 
+  public isCollapsed = true;
+  public isCollapsed2 = true;
+  public isCollapsed3 = true;
+  public isCollapsed4 = true;
+  public isCollapsed5 = true;
+
   constructor() { }
 
   ngOnInit(): void {
