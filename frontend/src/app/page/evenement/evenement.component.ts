@@ -3,7 +3,7 @@ import { CalendarEvent, CalendarEventAction, CalendarEventTimesChangedEvent, Cal
 import { startOfDay, endOfDay, subDays, addDays, endOfMonth, isSameDay, isSameMonth, addHours } from 'date-fns';
 import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 
 const colors: any = {
   red: {
@@ -34,6 +34,10 @@ export class EvenementComponent implements OnInit {
   CalendarView = CalendarView;
 
   viewDate: Date = new Date();
+
+  isLinear = false;
+  firstFormGroup: FormGroup;
+  secondFormGroup: FormGroup;
 
   modalData: {
     action: string;
@@ -78,32 +82,15 @@ export class EvenementComponent implements OnInit {
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal, private formBuilder: FormBuilder) {}
+  constructor(private modal: NgbModal, private _formBuilder: FormBuilder) {}
 
     ngOnInit() {
-        this.registerForm = this.formBuilder.group({
-            title: ['', Validators.required],
-            firstName: ['', Validators.required],
-            lastName: ['', Validators.required],
-            email: ['', [Validators.required, Validators.email]],
-            password: ['', [Validators.required, Validators.minLength(6)]],
-            confirmPassword: ['', Validators.required],
-            acceptTerms: [false, Validators.requiredTrue]
-        },);
-    }
-    get f() { return this.registerForm.controls; }
-
-    onSubmit() {
-        this.submitted = true;
-        if (this.registerForm.invalid) {
-            return;
-        }
-        alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.registerForm.value, null, 4));
-    }
-
-    onReset() {
-        this.submitted = false;
-        this.registerForm.reset();
+      this.firstFormGroup = this._formBuilder.group({
+        firstCtrl: ['', Validators.required]
+      });
+      this.secondFormGroup = this._formBuilder.group({
+        secondCtrl: ['', Validators.required]
+      });
     }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {

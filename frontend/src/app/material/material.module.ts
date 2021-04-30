@@ -8,6 +8,9 @@ import { MatButtonModule } from '@angular/material/button'
 import { MatListModule } from '@angular/material/list'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MatStepperModule } from '@angular/material/stepper'
+import { MatFormFieldModule } from '@angular/material/form-field'
+import { MatInputModule } from '@angular/material/input'
 
 @NgModule({
     declarations: [],
@@ -20,7 +23,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         MatButtonModule,
         MatListModule,
         FlexLayoutModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        MatStepperModule,
+        MatFormFieldModule,
+        MatInputModule
     ],
     exports: [
         MatTabsModule,
@@ -28,7 +34,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
         MatToolbarModule,
         MatIconModule,
         MatButtonModule,
-        MatListModule
+        MatListModule,
+        MatStepperModule,
+        MatFormFieldModule,
+        MatInputModule
     ]
 })
 
