@@ -7,12 +7,14 @@ import { PartenariatComponent } from '../page/partenariat/partenariat.component'
 import { EquipeComponent } from '../page/equipe/equipe.component';
 import { ContactComponent } from '../page/contact/contact.component';
 import { Page404Component } from '../page/page404/page404.component';
-import { LoginComponent } from '../dashboard/login/login.component'
+import { LoginComponent } from '../dashboard/login/login.component';
+import { HomeAdminComponent } from '../dashboard/home/home.component'
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
     { path: 'contact', component: ContactComponent},
     { path: 'admin/login', component:LoginComponent },
+    { path: 'admin/home', component:HomeAdminComponent },
     { path: 'evenement', component: EvenementComponent},
     { path: 'partenariat', component: PartenariatComponent},
     { path: 'equipe', component: EquipeComponent},
