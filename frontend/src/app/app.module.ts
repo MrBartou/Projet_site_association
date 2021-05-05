@@ -19,6 +19,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Page404Component } from './page/page404/page404.component';
+import { LoginComponent } from './dashboard/login/login.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { Page404Component } from './page/page404/page404.component';
     ContactComponent,
     FooterComponent,
     Page404Component,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
