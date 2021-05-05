@@ -1,0 +1,31 @@
+h1 {
+    text-align: center;
+    color: white;
+}
+
+ngb-carousel {
+    width: 50%;
+    margin: auto;
+    display: block;
+    padding: 3%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: rgb(63, 59, 59);
+    color: white;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-title {
+    background-color: rgb(105, 103, 103);
+}
