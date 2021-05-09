@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover, a:active {
+    color: lightgray;
+}
+
+.navigation {
+    width: 100%;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+    padding: 10px;
+    float: right;
+}
+
+mat-toolbar {
+    background-color: rgb(27, 26, 26);
+}
