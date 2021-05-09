@@ -20,6 +20,10 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Page404Component } from './page/page404/page404.component';
 import { LoginComponent } from './dashboard/login/login.component';
+import { HttpClientModule } from '@angular/common/http'
+import { CommonModule } from "@angular/common";
+import { HomeAdminComponent } from "./dashboard/home/home.component";
+
 
 @NgModule({
   declarations: [
@@ -33,8 +37,10 @@ import { LoginComponent } from './dashboard/login/login.component';
     FooterComponent,
     Page404Component,
     LoginComponent,
+    HomeAdminComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     RoutingModule,
@@ -47,7 +53,8 @@ import { LoginComponent } from './dashboard/login/login.component';
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
