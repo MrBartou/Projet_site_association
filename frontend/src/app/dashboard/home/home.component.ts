@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ApiService } from '../../api.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  providers: [ApiService]
 })
-export class HomeAdminComponent implements OnInit {
+export class HomeAdminComponent {
 
-  constructor() { }
+  movies = [{title: 'test'}, {desc: 'kngdl'}];
 
-  ngOnInit(): void {
+  constructor(private api:ApiService) {
+    this.getMovies();
   }
-
+  getMovies = () => {
+    this.api.getAllMovies().subscribe(
+      data => {
+        this.movies = data;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+  }
 }
