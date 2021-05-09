@@ -1,4 +1,24 @@
-.contact {
-    color: white;
+.form-container{
+    padding: 10px;
+    width: 300px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(70, 62, 62);
+    border: solid black 3px;
+    color: white;
+    border-radius: 30px;
+}
+
+.form-field{
+    display: block;
+}
+
+.color-text {
+    color: white;
+}
+
+.text-connect {
+    text-align: center;
+    color: white;
 }
