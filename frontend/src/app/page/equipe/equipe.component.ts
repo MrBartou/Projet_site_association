@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faFacebook, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -11,7 +11,7 @@ export class EquipeComponent implements OnInit {
 
   faFacebook = faFacebook;
   faInstagram = faInstagram;
-  faGithub = faGithub;
+  faGithub = faLinkedin;
   faMailBulk = faMailBulk;
 
   constructor() { }
