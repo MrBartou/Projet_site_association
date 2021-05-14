@@ -16,11 +16,11 @@ export class ApiService {
     return this.http.get(this.baseurl + '/event/', {headers: this.httpHeaders})
   }
 
-  getAllUsers(): Observable<any>{
-    return this.http.get(this.baseurl + '/users/', {headers: this.httpHeaders})
-  }
+  // getAllUsers(): Observable<any>{
+  //   return this.http.get(this.baseurl + '/users/', {headers: this.httpHeaders})
+  // }
 
-  getPartenariat(): Observable<any>{
-    return this.http.get(this.baseurl + '/partenariat/', {headers: this.httpHeaders})
-  }
+  // getPartenariat(): Observable<any>{
+  //   return this.http.get(this.baseurl + '/partenariat/', {headers: this.httpHeaders})
+  // }
 }
