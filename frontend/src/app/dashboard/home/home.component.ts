@@ -15,7 +15,7 @@ export class HomeAdminComponent {
     this.getMovies();
   }
   getMovies = () => {
-    this.api.getAllMovies().subscribe(
+    this.api.getAllEvent().subscribe(
       data => {
         this.movies = data;
       },
