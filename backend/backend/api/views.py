@@ -10,3 +10,7 @@ class EventsViewSet(viewsets.ModelViewSet):
 class PartnershipViewSet(viewsets.ModelViewSet):
     queryset = Partenrship.objects.all()
     serializer_class = PartenrshipSerializer
+
+class SubsciptionViewSet(viewsets.ModelViewSet):
+    queryset = Subsciption.objects.all()
+    serializer_class = SubsciptionSerializer

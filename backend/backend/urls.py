@@ -7,6 +7,7 @@ from backend.api import views
 router = routers.DefaultRouter()
 router.register(r'event', views.EventsViewSet)
 router.register(r'partnership', views.Partenrship)
+router.register(r'subscription', views.Subsciption)
 
 
 urlpatterns = [
