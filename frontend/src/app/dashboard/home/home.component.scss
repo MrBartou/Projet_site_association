@@ -1,3 +1,22 @@
 .Welcome {
     color: white;
 }
+
+.tab {
+    color: white !important;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label {
+    color: white;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+}
+
+.admin {
+    padding: 10px;
+    margin: auto;
+    width: 20%;
+}
