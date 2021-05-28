@@ -8,8 +8,8 @@ class EventsViewSet(viewsets.ModelViewSet):
     serializer_class = EventsSerializer
 
 class PartnershipViewSet(viewsets.ModelViewSet):
-    queryset = Partenrship.objects.all()
-    serializer_class = PartenrshipSerializer
+    queryset = Partnership.objects.all()
+    serializer_class = PartnershipSerializer
 
 class SubsciptionViewSet(viewsets.ModelViewSet):
     queryset = Subsciption.objects.all()

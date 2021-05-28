@@ -9,7 +9,7 @@ class Events(models.Model):
     color = models.CharField(max_length=32)
     desc = models.CharField(max_length=256)
 
-class Partenrship(models.Model):
+class Partnership(models.Model):
     category = models.CharField(max_length=32)
     img_abs_path = models.CharField(max_length=256)
     title = models.CharField(max_length=32)
