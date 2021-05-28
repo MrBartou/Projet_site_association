@@ -20,14 +20,3 @@ class Users(models.Users):
     mail = models.CharField(max_length=256)
     mdp = models.CharField(max_length=256)
     token = models.CharField(max_length=256)
-
-{
-    "Nouriture": {
-        "Mcdo": {
-            "desc": "pour les gros"
-        },
-        "Subway_ID": {
-
-        }
-    }
-}
