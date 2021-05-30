@@ -1,25 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../../api.service';
 
 
 export interface UsersEvent {
-  name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  fst_name: string,
+  snd_name: string,
+  mail: string,
+  phone: string,
+  school: string,
+  promo: string,
 }
 
-const ELEMENT_DATA: UsersEvent[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
-  {position: 2, name: 'Helium', weight: 4.0026, symbol: 'He'},
-  {position: 3, name: 'Lithium', weight: 6.941, symbol: 'Li'},
-  {position: 4, name: 'Beryllium', weight: 9.0122, symbol: 'Be'},
-  {position: 5, name: 'Boron', weight: 10.811, symbol: 'B'},
-  {position: 6, name: 'Carbon', weight: 12.0107, symbol: 'C'},
-  {position: 7, name: 'Nitrogen', weight: 14.0067, symbol: 'N'},
-  {position: 8, name: 'Oxygen', weight: 15.9994, symbol: 'O'},
-  {position: 9, name: 'Fluorine', weight: 18.9984, symbol: 'F'},
-  {position: 10, name: 'Neon', weight: 20.1797, symbol: 'Ne'},
+let ELEMENT_DATA: UsersEvent[] = [
+  {fst_name: "bla", snd_name: "bla", mail: "bla", phone: "bla", school: "bla", promo: "bla"}
 ];
 @Component({
   selector: 'app-home',
@@ -27,25 +20,45 @@ const ELEMENT_DATA: UsersEvent[] = [
   styleUrls: ['./home.component.scss'],
   providers: [ApiService]
 })
-export class HomeAdminComponent {
+export class HomeAdminComponent implements OnInit {
 
-  movies = [{title: 'test'}, {desc: 'kngdl'}];
+  events: any;
 
   constructor(private api:ApiService) {
-    this.getMovies();
+    this.getEvent();
+    this.getSubscription();
   }
 
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  ngOnInit() {
+  }
 
-  getMovies = () => {
+  getEvent = () => {
     this.api.getAllEvent().subscribe(
       data => {
-        this.movies = data;
+        this.events = data;
       },
       error => {
         console.log(error);
       }
     )
   }
+
+  getSubscription = () => {
+    this.api.postSubscription().subscribe(
+      data => {
+        data.forEach(element => {
+          const data = this.dataSource;
+          data.push({fst_name: element.fst_name, snd_name: element.snd_name, mail: element.mail, phone: element.phone, school: element.school, promo: element.promo});
+          this.dataSource = data;
+        });
+        this.dataSource = ELEMENT_DATA;
+      },
+      error => {
+        console.log(error);
+      }
+    )
+  }
+
+  displayedColumns: string[] = ['fst_name', 'snd_name', 'mail', 'phone', 'school', 'promo'];
+  dataSource = ELEMENT_DATA;
 }

@@ -24,6 +24,7 @@ import { LoginComponent } from './dashboard/login/login.component';
 import { HttpClientModule } from '@angular/common/http'
 import { CommonModule } from "@angular/common";
 import { HomeAdminComponent } from "./dashboard/home/home.component";
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -56,6 +57,7 @@ import { HomeAdminComponent } from "./dashboard/home/home.component";
     }),
     ReactiveFormsModule,
     HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

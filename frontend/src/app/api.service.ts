@@ -20,11 +20,11 @@ export class ApiService {
   //   return this.http.get(this.baseurl + '/users/', {headers: this.httpHeaders})
   // }
 
-  getPartenariat(): Observable<any>{
-    return this.http.get(this.baseurl + '/partership/', {headers: this.httpHeaders})
-  }
+  // getPartenariat(): Observable<any>{
+  //   return this.http.get(this.baseurl + '/partership/', {headers: this.httpHeaders})
+  // }
 
   postSubscription(): Observable<any>{
-    return this.http.post(this.baseurl + '/subscription/', {headers: this.httpHeaders})
+    return this.http.get(this.baseurl + '/subscription/', {headers: this.httpHeaders})
   }
 }

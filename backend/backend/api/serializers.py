@@ -5,7 +5,7 @@ from .models import Events, Partnership, Subsciption
 class EventsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Events
-        fields = ('id', 'start', 'end', 'title', 'color', 'desc')
+        fields = ('start', 'end', 'title')
 
 class PartnershipSerializer(serializers.ModelSerializer):
     class Meta:
