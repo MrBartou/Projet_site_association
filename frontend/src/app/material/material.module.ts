@@ -11,7 +11,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { MatStepperModule } from '@angular/material/stepper'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTableModule } from '@angular/material/table'
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import {MatSelectModule} from '@angular/material/select';
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
+        MatTableModule,
     ],
     exports: [
         MatTabsModule,
@@ -42,6 +44,7 @@ import {MatSelectModule} from '@angular/material/select';
         MatFormFieldModule,
         MatInputModule,
         MatSelectModule,
+        MatTableModule,
     ]
 })
 

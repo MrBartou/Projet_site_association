@@ -2,4 +2,86 @@
     <div class="container">
         <h2 class="Welcome">Bienvenue NAME sur le Dashboard</h2>
     </div>
+    <div class="tab">
+        <mat-tab-group mat-align-tabs="center">
+            <mat-tab label="Event 1">
+                <div class="admin">
+                    <button>Modifier l'evenement</button>
+                    <button>Supprimer l'evenement</button>
+                </div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <ng-container matColumnDef="position">
+                      <th mat-header-cell *matHeaderCellDef> ID </th>
+                      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="weight">
+                      <th mat-header-cell *matHeaderCellDef> Weight </th>
+                      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="symbol">
+                      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+            </mat-tab>
+            <mat-tab label="Event 2">
+                <div class="admin">
+                    <button>Modifier l'evenement</button>
+                    <button>Supprimer l'evenement</button>
+                </div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <ng-container matColumnDef="position">
+                      <th mat-header-cell *matHeaderCellDef> ID </th>
+                      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="weight">
+                      <th mat-header-cell *matHeaderCellDef> Weight </th>
+                      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="symbol">
+                      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+            </mat-tab>
+            <mat-tab label="Event 3">
+                <div class="admin">
+                    <button>Modifier l'evenement</button>
+                    <button>Supprimer l'evenement</button>
+                </div>
+                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+                    <ng-container matColumnDef="position">
+                      <th mat-header-cell *matHeaderCellDef> ID </th>
+                      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="name">
+                      <th mat-header-cell *matHeaderCellDef> Name </th>
+                      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="weight">
+                      <th mat-header-cell *matHeaderCellDef> Weight </th>
+                      <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                    </ng-container>
+                    <ng-container matColumnDef="symbol">
+                      <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                    </ng-container>
+                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                  </table>
+            </mat-tab>
+        </mat-tab-group><br><br>
+    </div>
 </body>
