@@ -6,6 +6,9 @@ from backend.api import views
 
 router = routers.DefaultRouter()
 router.register(r'event', views.EventsViewSet)
+router.register(r'partnership', views.PartnershipViewSet)
+router.register(r'subscription', views.SubsciptionViewSet)
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
