@@ -12,11 +12,13 @@ import { MatStepperModule } from '@angular/material/stepper'
 import { MatFormFieldModule } from '@angular/material/form-field'
 import { MatInputModule } from '@angular/material/input'
 import { MatSelectModule } from '@angular/material/select';
-import { MatTableModule } from '@angular/material/table'
+import { MatTableModule } from '@angular/material/table';
+import { MatDialogModule } from "@angular/material/dialog";
 
 
 @NgModule({
-    declarations: [],
+    declarations: [
+    ],
     imports: [
         CommonModule,
         MatTabsModule,
@@ -32,6 +34,7 @@ import { MatTableModule } from '@angular/material/table'
         MatInputModule,
         MatSelectModule,
         MatTableModule,
+        MatDialogModule,
     ],
     exports: [
         MatTabsModule,

@@ -13,5 +13,6 @@ router.register(r'subscription', views.SubsciptionViewSet)
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('events/?start={{start}}&end={{end}}&title={{title}}',views.activity_list),
 ]

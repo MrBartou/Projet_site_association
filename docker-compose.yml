@@ -1,0 +1,10 @@
+version: "2.3"
+services:
+    healthid-api:
+        restart: always
+        build:
+            context: ./backend/
+        ports:
+            - "8000:8000"
+        volumes:
+            - .:/usr/backend

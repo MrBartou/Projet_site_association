@@ -30,6 +30,7 @@ export class HomeAdminComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.getSubscription();
   }
 
   getEvent = () => {
