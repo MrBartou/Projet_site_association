@@ -36,12 +36,27 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 $ git clone https://github.com/MrBartou/site_bde/
 
 # Access
-$ cd site_bde/backend
+$ cd Projet_site_association/backend
 
-# Install dependencies
-$ python app.py
+# run server
+$ ./start.sh
 
-# The server will initialize in the <http://localhost:3000>
+# The server will initialize in the <http://localhost:8000>
+```
+
+## :checkered_flag: Documentation ##
+
+```bash
+# Clone this project
+$ git clone https://github.com/MrBartou/site_bde/
+
+# Access
+$ cd Projet_site_association/backend
+
+# Generation
+$ pdoc --html backend/backend
+
+# The server will initialize in the <http://localhost:8000>
 ```
 
 ## :memo: License ##

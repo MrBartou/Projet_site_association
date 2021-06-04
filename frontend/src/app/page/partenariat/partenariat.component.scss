@@ -1,10 +1,18 @@
 .card-body {
     position: relative;
-    bottom: 0;
+}
+
+.card-img-top {
+    width: auto;
+    height: 250px;
 }
 
 h2 {
     color: white;
+}
+
+.card-title {
+    color: black;
 }
 
 hr.new1 {

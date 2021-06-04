@@ -65,22 +65,7 @@ export class EvenementComponent implements OnInit {
 
   refresh: Subject<any> = new Subject();
 
-  events: CalendarEvent[] = [
-    {
-      start: new Date("May 10 2021"),
-      end: new Date("May 11 2021"),
-      title: 'LAN PENTATECH',
-      color: colors.red,
-      actions: this.actions,
-      allDay: true,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true,
-      },
-      draggable: false,
-    },
-  ];
-  event = [{start: 'test'}, {end: 'kngdl'}, {title: 'lalal'}, {color: 'blabla'}, {desc: 'desc'}];
+  events: CalendarEvent[] = [];
 
   activeDayIsOpen: boolean = true;
 
@@ -100,7 +85,15 @@ export class EvenementComponent implements OnInit {
     getEvent = () => {
       this.api.getAllEvent().subscribe(
         data => {
-          this.event = data;
+          this.events = []
+          data.forEach(element => {
+            const EventData = this.events
+            EventData.push({
+              start: new Date(element.start),
+              end: new Date(element.end),
+              title: element.title});
+            this.events = EventData;
+          });
         },
         error => {
           console.log(error);

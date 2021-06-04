@@ -9,6 +9,7 @@ class Events(models.Model):
     title = models.CharField(max_length=32)
     """Event's name"""
 
+
 class Partnership(models.Model):
     """Partneship class describe what's contained in a partnership poster"""
     category = models.CharField(max_length=32)

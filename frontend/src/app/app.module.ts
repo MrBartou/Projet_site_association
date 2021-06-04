@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -23,6 +24,7 @@ import { LoginComponent } from './dashboard/login/login.component';
 import { HttpClientModule } from '@angular/common/http'
 import { CommonModule } from "@angular/common";
 import { HomeAdminComponent } from "./dashboard/home/home.component";
+import { FormsModule } from "@angular/forms";
 
 
 @NgModule({
@@ -54,7 +56,8 @@ import { HomeAdminComponent } from "./dashboard/home/home.component";
       useFactory: adapterFactory,
     }),
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
