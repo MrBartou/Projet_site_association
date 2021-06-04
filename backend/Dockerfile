@@ -1,13 +1,18 @@
-FROM python:3.6
-ENV PYTHONBUFFERED 1
+FROM ubuntu:18.04
 
-RUN mkdir /backend
-WORKDIR /backend
+FROM python:3
+ENV PYTHONUNBUFFERED 1
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y libsqlite3-dev
+ENV LC_ALL C.UTF-8
+ENV LANG C.UTF-8
 
-RUN pip install -U pip setuptools
+# -- Install Application into container:
+RUN set -ex && mkdir /app
 
-ADD . /backend/
+WORKDIR /app
+ADD requirements.txt /app/
 
-EXPOSE 8000
+RUN pip install -r requirements.txt
+
+# -- Adding dependencies:
+ADD . /app/

@@ -4,10 +4,10 @@
     </div>
     <div class="tab">
         <mat-tab-group mat-align-tabs="center">
-            <mat-tab label="{{ this.events[0].title }}">
+            <mat-tab label="{{ this.events[0].title }}"><br>
                 <div class="admin">
-                    <button>Modifier l'evenement</button>
-                    <button>Supprimer l'evenement</button>
+                    <input type="submit" value="Modifier l'évenement" id="submit" (click)=openmodal()><br>
+                    <input type="submit" value="Supprimer l'évenement" id="submit" (click)=suppr_event(this.events[0].title)><br>
                 </div>
                 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
                     <ng-container matColumnDef="fst_name">
@@ -40,8 +40,8 @@
             </mat-tab>
             <mat-tab label="{{ this.events[1].title }}">
                 <div class="admin">
-                    <button>Modifier l'evenement</button>
-                    <button>Supprimer l'evenement</button>
+                  <input type="submit" value="Modifier l'évenement" id="submit" (click)=openmodal()><br>
+                  <input type="submit" value="Supprimer l'évenement" id="submit" (click)=suppr_event(this.events[1].title)><br>
                 </div>
                 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
                     <ng-container matColumnDef="fst_name">
@@ -75,3 +75,34 @@
         </mat-tab-group><br><br>
     </div>
 </body>
+
+<ng-template #editModal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Edit Activités</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <label for="title">Title</label>
+        <div class="input-group">
+          <input id="title" class="form-control" placeholder="Title" [title]="title">
+        </div><br>
+        <label for="StartOfDate">Start Date</label>
+        <div class="input-group">
+          <input id="StartOfDate" class="form-control" placeholder="May 15 2021" [sd]="sd">
+        </div><br>
+        <label for="EndOfDate">End Date</label>
+        <div class="input-group">
+          <input id="EndOfDate" class="form-control" placeholder="May 15 2021" [se]="se">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="saveEvent()">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
+  </div>
+</ng-template>

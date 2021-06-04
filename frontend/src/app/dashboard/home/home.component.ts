@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, Input } from '@angular/core';
 import { ApiService } from '../../api.service';
-
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 export interface UsersEvent {
   fst_name: string,
@@ -21,16 +21,38 @@ let ELEMENT_DATA: UsersEvent[] = [
   providers: [ApiService]
 })
 export class HomeAdminComponent implements OnInit {
+  @ViewChild('editModal') editModal : TemplateRef<any>;
+  @Input() title: any;
+  @Input() se: any;
+  @Input() sd: any;
 
   events: any;
 
-  constructor(private api:ApiService) {
+  constructor(private api:ApiService, private modalService: NgbModal) {
     this.getEvent();
     this.getSubscription();
   }
 
   ngOnInit() {
     this.getSubscription();
+  }
+
+  saveEvent() {
+    console.log(this.title);
+    console.log(this.sd);
+    console.log(this.se);
+  }
+
+  suppr_event(name: string) {
+    this.api.deleteEvent(name).subscribe(
+      error => {
+        console.log(error);
+      }
+    );
+  }
+
+  openmodal() {
+    this.modalService.open(this.editModal);
   }
 
   getEvent = () => {

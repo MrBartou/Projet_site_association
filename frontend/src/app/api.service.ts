@@ -16,15 +16,23 @@ export class ApiService {
     return this.http.get(this.baseurl + '/event/', {headers: this.httpHeaders})
   }
 
-  // getAllUsers(): Observable<any>{
-  //   return this.http.get(this.baseurl + '/users/', {headers: this.httpHeaders})
-  // }
+  getPartnerships(): Observable<any>{
+    return this.http.get(this.baseurl + '/partnership/', {headers: this.httpHeaders})
+  }
 
-  // getPartenariat(): Observable<any>{
-  //   return this.http.get(this.baseurl + '/partership/', {headers: this.httpHeaders})
-  // }
+  getAdmins(): Observable<any>{
+    return this.http.get(this.baseurl + '/admins/', {headers: this.httpHeaders})
+  }
 
   postSubscription(): Observable<any>{
     return this.http.get(this.baseurl + '/subscription/', {headers: this.httpHeaders})
+  }
+
+  // postEvent(): Observable<any>{
+  //   return this.http.post(this.baseurl + '/event/', HttpOptions)
+  // }
+
+  deleteEvent(name: string): Observable<any>{
+    return this.http.delete(this.baseurl + `/events/${name}`)
   }
 }
