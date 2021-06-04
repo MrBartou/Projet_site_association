@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Events, Partnership, Subsciption
+from .models import Events, Partnership, Subsciption, Admins
 
 class EventsSerializer(serializers.ModelSerializer):
     class Meta:
@@ -15,3 +15,8 @@ class SubsciptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subsciption
         fields = ('fst_name', 'snd_name', 'mail', 'phone', 'school', 'promo')
+
+class AdminsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Admins
+        fields = ('username', 'email', 'password')
