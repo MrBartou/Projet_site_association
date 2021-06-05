@@ -1,6 +1,4 @@
-#!/usr/bin/env bash
-
-pdoc --html backend/backend
+#!/bin/bash
 
 python3 manage.py makemigrations
 python3 manage.py migrate
