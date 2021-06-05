@@ -1,3 +1,4 @@
+"""Define road's logic"""
 from rest_framework import viewsets
 from .serializers import *
 from .models import *
@@ -24,6 +25,7 @@ class AdminsViewSet(viewsets.ModelViewSet):
 
 @api_view(['POST'])
 def activity_list(request):
+    """define behaviour on POST request on event's road"""
     if request.method == 'POST':
         serializer = EventsSerializer(data=request.data)
         if serializer.is_valid():
@@ -33,6 +35,7 @@ def activity_list(request):
 
 @api_view(['DELETE'])
 def suppr_acti(request, title):
+    """define behaviour on DELETE request on event's road"""
     try:
         even = Events.objects.get(title=title)
     except Events.DoesNotExist:
@@ -44,6 +47,7 @@ def suppr_acti(request, title):
 
 @api_view(['POST'])
 def user_list(request):
+    """define behaviour on POST request on users's road"""
     if request.method == 'POST':
         serializer = SubsciptionSerializer(data=request.data)
         if serializer.is_valid():
@@ -53,6 +57,7 @@ def user_list(request):
 
 @api_view(['POST'])
 def partnership_list(request):
+    """define behaviour on POST request on partnership's road"""
     if request.method == 'POST':
         serializer = PartnershipSerializer(data=request.data)
         if serializer.is_valid():
