@@ -8,18 +8,22 @@ from rest_framework import status
 from django.http.response import JsonResponse
 
 class EventsViewSet(viewsets.ModelViewSet):
+    """Define Event's road logic"""
     queryset = Events.objects.all()
     serializer_class = EventsSerializer
 
 class PartnershipViewSet(viewsets.ModelViewSet):
+    """Define Partnership's road logic"""
     queryset = Partnership.objects.all()
     serializer_class = PartnershipSerializer
 
 class SubsciptionViewSet(viewsets.ModelViewSet):
+    """Define Subscription's road logic"""
     queryset = Subsciption.objects.all()
     serializer_class = SubsciptionSerializer
 
 class AdminsViewSet(viewsets.ModelViewSet):
+    """Define Admin's road logic"""
     queryset = Admins.objects.all()
     serializer_class = AdminsSerializer
 
