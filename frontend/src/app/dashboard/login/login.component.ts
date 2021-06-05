@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ export class LoginComponent implements OnInit {
   emailRegx = /^(([^<>+()\[\]\\.,;:\s@"-#$%&=]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,3}))$/;
 
   constructor(
-    private formBuilder: FormBuilder
+    private formBuilder: FormBuilder,
+    private router: Router,
   ) { }
 
   ngOnInit() {
@@ -26,6 +28,11 @@ export class LoginComponent implements OnInit {
     if (!this.loginForm.valid) {
       return;
     }
-    console.log(this.loginForm.value);
+    if (this.loginForm.value.email == "bde.toulouse@epitech.eu" || this.loginForm.value.email == "Anthony31") {
+      console.log("hello");
+      this.router.navigate(['/admin/home']);
+    }
+    console.log(this.loginForm.value.email);
+    console.log(this.loginForm.value.password);
   }
 }

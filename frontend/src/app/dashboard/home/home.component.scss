@@ -1,3 +1,37 @@
 .Welcome {
     color: white;
 }
+
+.tab {
+    color: white !important;
+}
+
+::ng-deep .mat-tab-list .mat-tab-labels .mat-tab-label {
+    color: white;
+}
+
+table {
+    margin: auto;
+    width: 80%;
+}
+
+.admin {
+    padding: 10px;
+    margin: auto;
+    width: 20%;
+}
+
+#submit {
+    color:#fff;
+	background-color:#e74c3c;
+	outline: none;
+    border: 0;
+    color: #fff;
+	text-transform:uppercase;
+	border-radius:2px;
+	position:relative;
+    text-decoration: none;
+    cursor: pointer;
+    margin: auto;
+    display: block;
+}
