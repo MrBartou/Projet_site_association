@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http'
 import { CommonModule } from "@angular/common";
 import { HomeAdminComponent } from "./dashboard/home/home.component";
 import { FormsModule } from "@angular/forms";
+import { TermsComponent } from './page/terms/terms.component';
 
 
 @NgModule({
@@ -40,6 +41,7 @@ import { FormsModule } from "@angular/forms";
     Page404Component,
     LoginComponent,
     HomeAdminComponent,
+    TermsComponent,
   ],
   imports: [
     CommonModule,

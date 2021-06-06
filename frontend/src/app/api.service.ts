@@ -28,10 +28,6 @@ export class ApiService {
     return this.http.get(this.baseurl + '/subscription/', {headers: this.httpHeaders})
   }
 
-  // postEvent(): Observable<any>{
-  //   return this.http.post(this.baseurl + '/event/', HttpOptions)
-  // }
-
   deleteEvent(name: string): Observable<any>{
     return this.http.delete(this.baseurl + `/events/${name}`)
   }

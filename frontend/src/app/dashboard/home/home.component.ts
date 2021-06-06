@@ -12,7 +12,6 @@ export interface UsersEvent {
 }
 
 let ELEMENT_DATA: UsersEvent[] = [
-  {fst_name: "bla", snd_name: "bla", mail: "bla", phone: "bla", school: "bla", promo: "bla"}
 ];
 @Component({
   selector: 'app-home',
@@ -34,7 +33,6 @@ export class HomeAdminComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.getSubscription();
   }
 
   saveEvent() {

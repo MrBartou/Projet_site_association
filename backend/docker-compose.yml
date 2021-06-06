@@ -1,13 +1,10 @@
 version: '3'
 
 services:
-    frontend:
-        build: frontend
-        ports:
-            - "4200:4200"
-
-    backend:
-        build: backend
+    web:
+        build: .
         command: python3 manage.py runserver 0.0.0.0:8000
+        volumes:
+            - .:/backend
         ports:
             - "8000:8000"

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-partenariat',
@@ -6,16 +7,33 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./partenariat.component.scss']
 })
 export class PartenariatComponent implements OnInit {
+  partener = [];
 
-  public isCollapsed = true;
-  public isCollapsed2 = true;
-  public isCollapsed3 = true;
-  public isCollapsed4 = true;
-  public isCollapsed5 = true;
+  constructor(private api: ApiService) { }
 
-  constructor() { }
+  ngOnInit() {
+    this.getPartenership();
+  }
 
-  ngOnInit(): void {
+  getPartenership = () => {
+    this.api.getPartnerships().subscribe(
+      data => {
+        this.partener = []
+        data.forEach(element => {
+          const EventData = this.partener
+          EventData.push({
+            category: element.category,
+            img_abs_path: element.img_abs_path,
+            title: element.title,
+            description: element.description});
+          this.partener = EventData;
+        });
+        console.log(this.partener);
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 
 }

@@ -5,24 +5,24 @@
       <hr class="new1">
       <div class="card-deck">
         <div class="card">
-          <img class="card-img-top" src="../../../assets/partenariat/logoDonald.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{{ this.partener[1].img_abs_path }}" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Macdonald Compans Caffarelli</h2>
-            <p class="card-text">Menu best Of à 5 euros sous présentation de la carte étudiants</p>
+            <h2 class="card-title">{{ this.partener[1].title }}</h2>
+            <p class="card-text">{{ this.partener[1].description }}</p>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="../../../assets/partenariat/Subway-Logo.jpg" alt="Card image cap">
+          <img class="card-img-top" src="{{ this.partener[2].img_abs_path }}" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">SubWay Compans Caffarelli</h2>
-            <p class="card-text">Menu SUB30 à 7 euros sous présentation de la carte étudiants</p>
+            <h2 class="card-title">{{ this.partener[2].title }}</h2>
+            <p class="card-text">{{ this.partener[2].description }}</p>
           </div>
         </div>
         <div class="card">
-          <img class="card-img-top" src="../../../assets/partenariat/logo_classcroute.png" alt="Card image cap">
+          <img class="card-img-top" src="{{ this.partener[3].img_abs_path }}" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">Class Croute</h2>
-            <p class="card-text">Remise de 12% sur toute la carte pause déjeuner ! Et menu Étudiant à 6,40</p>
+            <h2 class="card-title">{{ this.partener[3].title }}</h2>
+            <p class="card-text">{{ this.partener[3].description }}</p>
           </div>
         </div>
       </div><br>
