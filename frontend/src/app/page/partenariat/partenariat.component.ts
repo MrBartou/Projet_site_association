@@ -28,10 +28,10 @@ export class PartenariatComponent implements OnInit {
             description: element.description});
           this.partener = EventData;
         });
-        console.log(this.partener);
       },
       error => {
         console.log(error);
+        alert("Une erreur est survenue veuillez réessayer");
       }
     )
   }

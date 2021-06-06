@@ -1,6 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild, Input } from '@angular/core';
 import { ApiService } from '../../api.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FormBuilder } from '@angular/forms';
 
 export interface UsersEvent {
   fst_name: string,
@@ -21,24 +22,26 @@ let ELEMENT_DATA: UsersEvent[] = [
 })
 export class HomeAdminComponent implements OnInit {
   @ViewChild('editModal') editModal : TemplateRef<any>;
-  @Input() title: any;
-  @Input() se: any;
-  @Input() sd: any;
+  @ViewChild('createActi') createactivity : TemplateRef<any>;
 
   events: any;
 
-  constructor(private api:ApiService, private modalService: NgbModal) {
+  public title: any;
+  public endDate : any;
+  public startDate: any;
+
+  from = this.formBuilder.group({
+    start: "",
+    end: "",
+    title: ""
+  })
+
+  constructor(private api:ApiService, private modalService: NgbModal, private formBuilder: FormBuilder) {
     this.getEvent();
     this.getSubscription();
   }
 
   ngOnInit() {
-  }
-
-  saveEvent() {
-    console.log(this.title);
-    console.log(this.sd);
-    console.log(this.se);
   }
 
   suppr_event(name: string) {
@@ -47,10 +50,38 @@ export class HomeAdminComponent implements OnInit {
         console.log(error);
       }
     );
+    alert("L'évènement a bien été modifié");
+  }
+
+  onSubmit2(): void {
+    this.api.deleteEvent(this.events[0].title).subscribe(
+      error => {
+        console.log(error);
+      }
+    );
+    this.api.postActivity(this.from.value).subscribe(
+      error => {
+        console.log(error);
+      }
+    );
+    alert("Votre activité a bien été modifier");
+  }
+
+  onSubmit(): void {
+    this.api.postActivity(this.from.value).subscribe(
+      error => {
+        console.log(error);
+      }
+    );
+    alert("Votre activité a bien été créer");
   }
 
   openmodal() {
     this.modalService.open(this.editModal);
+  }
+
+  openmodal2() {
+    this.modalService.open(this.createactivity);
   }
 
   getEvent = () => {
@@ -65,7 +96,7 @@ export class HomeAdminComponent implements OnInit {
   }
 
   getSubscription = () => {
-    this.api.postSubscription().subscribe(
+    this.api.getSubscription().subscribe(
       data => {
         data.forEach(element => {
           const data = this.dataSource;

@@ -14,7 +14,7 @@ admins -> road for list admins
 router.register(r'event', views.EventsViewSet)
 router.register(r'partnership', views.PartnershipViewSet)
 router.register(r'subscription', views.SubsciptionViewSet)
-router.register(r'admins', views.AdminsViewSet)
+router.register(r'admins', views.AdministratorsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -23,5 +23,5 @@ urlpatterns = [
     url(r'^event/',views.activity_list),
     url(r'^users/',views.user_list),
     url(r'^partnerships/',views.partnership_list),
-    url(r'events/(?P<title>[A-Z\-]+)$', views.suppr_acti),
+    url(r'events/(?P<title>[A-Za-z0-9_. ]+)$', views.suppr_acti),
 ]

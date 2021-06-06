@@ -1,10 +1,11 @@
 <body><br><br>
     <div class="container">
         <h2 class="Welcome">Bienvenue BDE EPITECH TOULOUSE sur le Dashboard</h2>
+        <input type="submit" value="Creer un évenement" (click)=openmodal2() class="create"><br>
     </div>
     <div class="tab">
         <mat-tab-group mat-align-tabs="center">
-            <mat-tab label="{{ this.events[0].title }}"><br>
+            <mat-tab *ngFor="let title of this.events" label="{{ title.title }}"><br>
                 <div class="admin">
                     <input type="submit" value="Modifier l'évenement" id="submit" (click)=openmodal()><br>
                     <input type="submit" value="Supprimer l'évenement" id="submit" (click)=suppr_event(this.events[0].title)><br>
@@ -38,74 +39,6 @@
                     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
                   </table>
             </mat-tab>
-            <mat-tab label="{{ this.events[1].title }}">
-                <div class="admin">
-                  <input type="submit" value="Modifier l'évenement" id="submit" (click)=openmodal()><br>
-                  <input type="submit" value="Supprimer l'évenement" id="submit" (click)=suppr_event(this.events[1].title)><br>
-                </div>
-                <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-                    <ng-container matColumnDef="fst_name">
-                      <th mat-header-cell *matHeaderCellDef> Prénom </th>
-                      <td mat-cell *matCellDef="let element"> {{element.fst_name}} </td>
-                    </ng-container>
-                    <ng-container matColumnDef="snd_name">
-                      <th mat-header-cell *matHeaderCellDef> Nom </th>
-                      <td mat-cell *matCellDef="let element"> {{element.snd_name}} </td>
-                    </ng-container>
-                    <ng-container matColumnDef="mail">
-                      <th mat-header-cell *matHeaderCellDef> Mail </th>
-                      <td mat-cell *matCellDef="let element"> {{element.mail}} </td>
-                    </ng-container>
-                    <ng-container matColumnDef="phone">
-                      <th mat-header-cell *matHeaderCellDef> Téléphone </th>
-                      <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
-                    </ng-container>
-                    <ng-container matColumnDef="school">
-                      <th mat-header-cell *matHeaderCellDef> École </th>
-                      <td mat-cell *matCellDef="let element"> {{element.school}} </td>
-                    </ng-container>
-                    <ng-container matColumnDef="promo">
-                      <th mat-header-cell *matHeaderCellDef> Promo </th>
-                      <td mat-cell *matCellDef="let element"> {{element.promo}} </td>
-                    </ng-container>
-                    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                  </table>
-            </mat-tab>
-            <mat-tab label="{{ this.events[2].title }}">
-              <div class="admin">
-                <input type="submit" value="Modifier l'évenement" id="submit" (click)=openmodal()><br>
-                <input type="submit" value="Supprimer l'évenement" id="submit" (click)=suppr_event(this.events[1].title)><br>
-              </div>
-              <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-                  <ng-container matColumnDef="fst_name">
-                    <th mat-header-cell *matHeaderCellDef> Prénom </th>
-                    <td mat-cell *matCellDef="let element"> {{element.fst_name}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="snd_name">
-                    <th mat-header-cell *matHeaderCellDef> Nom </th>
-                    <td mat-cell *matCellDef="let element"> {{element.snd_name}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="mail">
-                    <th mat-header-cell *matHeaderCellDef> Mail </th>
-                    <td mat-cell *matCellDef="let element"> {{element.mail}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="phone">
-                    <th mat-header-cell *matHeaderCellDef> Téléphone </th>
-                    <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="school">
-                    <th mat-header-cell *matHeaderCellDef> École </th>
-                    <td mat-cell *matCellDef="let element"> {{element.school}} </td>
-                  </ng-container>
-                  <ng-container matColumnDef="promo">
-                    <th mat-header-cell *matHeaderCellDef> Promo </th>
-                    <td mat-cell *matCellDef="let element"> {{element.promo}} </td>
-                  </ng-container>
-                  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-                </table>
-          </mat-tab>
         </mat-tab-group><br><br>
     </div>
 </body>
@@ -117,26 +50,57 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <div class="modal-body">
-    <form>
+  <form [formGroup]="from" (ngSubmit)="onSubmit2()">
+    <div class="modal-body">
       <div class="form-group">
         <label for="title">Title</label>
         <div class="input-group">
-          <input id="title" class="form-control" placeholder="Title" [title]="title">
+          <input id="title" class="form-control" placeholder="{{this.events[0].title}}" formControlName="title">
         </div><br>
         <label for="StartOfDate">Start Date</label>
         <div class="input-group">
-          <input id="StartOfDate" class="form-control" placeholder="May 15 2021" [sd]="sd">
+          <input id="StartOfDate" class="form-control" placeholder="{{this.events[0].start}}" formControlName="start">
         </div><br>
         <label for="EndOfDate">End Date</label>
         <div class="input-group">
-          <input id="EndOfDate" class="form-control" placeholder="May 15 2021" [se]="se">
+          <input id="EndOfDate" class="form-control" placeholder="{{this.events[0].end}}" formControlName="end">
         </div>
       </div>
-    </form>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-outline-dark">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
+    </div>
+  </form>
+</ng-template>
+
+<ng-template #createActi let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Créer une activité</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss()">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="saveEvent()">Save</button>
-    <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
-  </div>
+  <form [formGroup]="from" (ngSubmit)="onSubmit()">
+    <div class="modal-body">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <div class="input-group">
+          <input id="title" class="form-control" placeholder="Title" formControlName="title">
+        </div><br>
+        <label for="StartOfDate">Start Date</label>
+        <div class="input-group">
+          <input id="StartOfDate" class="form-control" placeholder="May 15 2021" formControlName="start">
+        </div><br>
+        <label for="EndOfDate">End Date</label>
+        <div class="input-group">
+          <input id="EndOfDate" class="form-control" placeholder="May 15 2021" formControlName="end">
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button type="submit" class="btn btn-outline-dark">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close()">Close</button>
+    </div>
+  </form>
 </ng-template>
