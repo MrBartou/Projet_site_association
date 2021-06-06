@@ -23,6 +23,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
     - name: Start DockerFile frontend
       run: docker build -t frontend frontend/
 
@@ -31,6 +34,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
     - name: Start Docker-compose
       run: docker-compose up -d --build
 
