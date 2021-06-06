@@ -1,13 +1,15 @@
-FROM python:3
+# UwU
+FROM python:3.9-slim
 
-LABEL org.opencontainers.image.authors="Epitech TOULOUSE"
-LABEL multi.label1="By Anthony and Léo" \
-      multi.label2="For Projet hub des association"
+ENV PYTHONUNBUFFERED=True DEBIAN_FRONTEND=noninteractive PYTHONDONTWRITEBYTECODE=True
 
-ENV PYTHONUNBUFFERED 1
+WORKDIR /usr/src/app
+EXPOSE 8000/tcp
 
-RUN mkdir /backend
-WORKDIR /backend
-COPY . /backend/
-
+COPY requirements.txt .
 RUN pip install -r requirements.txt
+
+COPY . .
+
+ENTRYPOINT [ "python", "manage.py" ]
+CMD [ "runserver", "0.0.0.0:8000" ]

@@ -1,10 +1,20 @@
-version: '3'
+version: "3.9"
 
 services:
-    web:
+    django:
         build: .
-        command: python3 manage.py runserver 0.0.0.0:8000
-        volumes:
-            - .:/backend
+        env_file: .env
         ports:
-            - "8000:8000"
+            - 8000:8000/tcp
+        volumes:
+            - type: volume
+              source: data
+              target: /var/data
+              volume:
+                  nocopy: true
+            - type: bind
+              source: .
+              target: /usr/src/app
+
+volumes:
+    data:
