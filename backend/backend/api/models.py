@@ -1,3 +1,4 @@
+"""Define each elements in backend"""
 from django.db import models
 
 class Events(models.Model):
@@ -44,9 +45,3 @@ class Administrators(models.Model):
     """admin's email"""
     password = models.CharField(max_length=32)
     """admin's password"""
-
-# class Users(models.Users):
-#     nom = models.CharField(max_length=256)
-#     mail = models.CharField(max_length=256)
-#     mdp = models.CharField(max_length=256)
-#     token = models.CharField(max_length=256)

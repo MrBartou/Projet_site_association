@@ -1,3 +1,4 @@
+"""URL path and rules to access backend elements"""
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import url, include
@@ -5,14 +6,11 @@ from rest_framework import routers
 from backend.api import views
 
 router = routers.DefaultRouter()
-'''
-event -> road for list event
-partnership -> road for list partnership
-subscription -> road for list subscription
-admins -> road for list admins
-'''
+
 router.register(r'event', views.EventsViewSet)
+"""road to access event list"""
 router.register(r'partnership', views.PartnershipViewSet)
+"""road to access partnership list"""
 router.register(r'subscription', views.SubsciptionViewSet)
 router.register(r'admins', views.AdministratorsViewSet)
 
