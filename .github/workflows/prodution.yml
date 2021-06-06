@@ -16,10 +16,10 @@ jobs:
       uses: actions/checkout@v1
 
     - name: Start DockerFile backend
-      run: docker build -t backend .
+      run: docker build -t backend backend/
 
     - name: Start DockerFile frontend
-      run: docker build -t backend .
+      run: docker build -t frontend frontend/
 
     - name: Start Docker-compose
       run: docker-compose up
