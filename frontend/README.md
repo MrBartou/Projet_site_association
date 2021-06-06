@@ -36,12 +36,15 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 $ git clone https://github.com/MrBartou/site_bde/
 
 # Access
-$ cd Projet_site_association/frontend
+$ cd Projet_site_association
 
-# launch frontend without backend
-$ ng serve
+# You can use the launcher
+$ ./start.sh
 
-# The server will initialize in the <http://localhost:3000>
+# Or you can use the docker-compose
+$ docker-compose up
+
+# The server will initialize in the <http://localhost:4200>
 ```
 
 ## :memo: License ##

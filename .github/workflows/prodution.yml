@@ -1,0 +1,44 @@
+name: Production
+
+on:
+  push:
+    branches:
+      - 'devOps'
+      - 'main'
+
+jobs:
+  backend:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Start DockerFile backend
+      run: docker build -t backend backend/
+
+  frontend:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Start DockerFile frontend
+      run: docker build -t frontend frontend/
+
+  production:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Start Docker-compose
+      run: docker-compose up -d --build
+
+    - name: Stop docker
+      run: docker-compose down

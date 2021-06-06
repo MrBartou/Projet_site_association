@@ -1,0 +1,24 @@
+name: Backend
+
+on:
+  push:
+    branches:
+      - 'backend'
+
+jobs:
+  docker:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Start DockerFile
+      run: docker build -t backend backend/
+
+    - name: Start Docker-compose
+      run: docker-compose up -d --build
+
+    - name: Stop docker
+      run: docker-compose down
