@@ -61,7 +61,7 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 $ git clone git@github.com:MrBartou/Projet_site_association.git
 
 # Access
-$ cd site_bde
+$ cd Projet_site_association
 
 # Install dependencies
 $ docker-compose up

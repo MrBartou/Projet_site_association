@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/api.service';
 
 @Component({
   selector: 'app-home',
@@ -6,11 +7,24 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  images = [944, 1011, 984].map((n) => `https://picsum.photos/id/${n}/900/500`);
+  images = ["image1.png", "image2.png", "image3.png", "image4.png"].map((n) => `../../assets/home/${n}`);
+  events: any;
 
-  constructor() { }
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
+    this.getEvent();
+  }
+
+  getEvent = () => {
+    this.api.getAllEvent().subscribe(
+      data => {
+        this.events = data;
+      },
+      error => {
+        console.log(error);
+      }
+    )
   }
 
 }

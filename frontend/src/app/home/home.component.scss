@@ -4,7 +4,8 @@ h1 {
 }
 
 ngb-carousel {
-    width: 50%;
+    max-width: 90%;
+    max-height: 50%;
     margin: auto;
     display: block;
     padding: 3%;
@@ -28,4 +29,9 @@ ngb-carousel {
 
 .card-title {
     background-color: rgb(105, 103, 103);
+}
+
+.picsum-img-wrapper {
+    width: 500px;
+    height: 600px;
 }

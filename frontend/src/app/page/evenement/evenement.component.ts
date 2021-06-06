@@ -4,6 +4,7 @@ import { startOfDay, endOfDay, subDays, addDays, endOfMonth, isSameDay, isSameMo
 import { Subject } from 'rxjs';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { ApiService } from 'src/app/api.service';
 
 const colors: any = {
   red: {
@@ -64,25 +65,13 @@ export class EvenementComponent implements OnInit {
 
   refresh: Subject<any> = new Subject();
 
-  events: CalendarEvent[] = [
-    {
-      start: startOfDay(new Date()),
-      end: startOfDay(new Date()),
-      title: 'LAN PENTATECH',
-      color: colors.red,
-      actions: this.actions,
-      allDay: true,
-      resizable: {
-        beforeStart: true,
-        afterEnd: true,
-      },
-      draggable: false,
-    },
-  ];
+  events: CalendarEvent[] = [];
 
   activeDayIsOpen: boolean = true;
 
-  constructor(private modal: NgbModal, private _formBuilder: FormBuilder) {}
+  constructor(private modal: NgbModal, private _formBuilder: FormBuilder, private api:ApiService) {
+    this.getEvent();
+  }
 
     ngOnInit() {
       this.firstFormGroup = this._formBuilder.group({
@@ -91,6 +80,25 @@ export class EvenementComponent implements OnInit {
       this.secondFormGroup = this._formBuilder.group({
         secondCtrl: ['', Validators.required]
       });
+    }
+
+    getEvent = () => {
+      this.api.getAllEvent().subscribe(
+        data => {
+          this.events = []
+          data.forEach(element => {
+            const EventData = this.events
+            EventData.push({
+              start: new Date(element.start),
+              end: new Date(element.end),
+              title: element.title});
+            this.events = EventData;
+          });
+        },
+        error => {
+          console.log(error);
+        }
+      )
     }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {

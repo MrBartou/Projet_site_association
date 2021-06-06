@@ -36,10 +36,10 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 $ git clone https://github.com/MrBartou/site_bde/
 
 # Access
-$ cd site_bde/frontend
+$ cd Projet_site_association/frontend
 
-# Install dependencies
-$ npm run dev
+# launch frontend without backend
+$ ng serve
 
 # The server will initialize in the <http://localhost:3000>
 ```

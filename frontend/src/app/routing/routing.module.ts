@@ -8,7 +8,8 @@ import { EquipeComponent } from '../page/equipe/equipe.component';
 import { ContactComponent } from '../page/contact/contact.component';
 import { Page404Component } from '../page/page404/page404.component';
 import { LoginComponent } from '../dashboard/login/login.component';
-import { HomeAdminComponent } from '../dashboard/home/home.component'
+import { HomeAdminComponent } from '../dashboard/home/home.component';
+import { TermsComponent } from '../page/terms/terms.component'
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
     { path: 'admin/home', component:HomeAdminComponent },
     { path: 'evenement', component: EvenementComponent},
     { path: 'partenariat', component: PartenariatComponent},
+    { path: 'terms', component: TermsComponent},
     { path: 'equipe', component: EquipeComponent},
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: '**', component: Page404Component }
