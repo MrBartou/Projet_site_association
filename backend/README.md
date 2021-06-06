@@ -36,15 +36,34 @@ Before starting :checkered_flag:, you need to have [Git](https://git-scm.com) an
 $ git clone https://github.com/MrBartou/site_bde/
 
 # Access
-$ cd Projet_site_association/backend
+$ cd Projet_site_association/
 
-# run server
+# You can use the launcher
+$ ./start.sh
+
+# Or you can use the docker
+$ docker-compose up
+
+# The server will initialize in the <http://localhost:8000>
+```
+## :checkered_flag: Documentation ##
+
+```bash
+# Clone this project
+$ git clone https://github.com/MrBartou/site_bde/
+
+# Access
+$ cd Projet_site_association/
+
+# You can use the launcher
 $ ./start.sh
 
 # The server will initialize in the <http://localhost:8000>
 ```
 
-## :checkered_flag: Documentation ##
+## :checkered_flag: Modification ##
+
+For modify the code you have to launch the backend
 
 ```bash
 # Clone this project
@@ -53,8 +72,14 @@ $ git clone https://github.com/MrBartou/site_bde/
 # Access
 $ cd Projet_site_association/backend
 
-# Generation
-$ pdoc --html backend/backend
+# Make the migration
+$ python3 manage.py makemigrations
+
+# Migrate all
+$ python3 manage.py migrate
+
+# Run the server
+$ python3 manage.py runserver
 
 # The server will initialize in the <http://localhost:8000>
 ```

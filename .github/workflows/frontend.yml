@@ -1,27 +1,24 @@
-name: Frontend
+name: Backend
 
 on:
   push:
     branches:
-      - 'frontend'
+      - 'backend'
 
 jobs:
-  build:
-    name: Build and Test
-    runs-on: ubuntu-18.04
+  docker:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v1
-    - name: Use Node.js 12.8
-      uses: actions/setup-node@v1
-      with:
-        node-version: 12.8
-    - name: Install dependencies
-      run: npm install
-    - name: Lint
-      run: npm run lint
-    - name: Build
-      run: npm run build -- --prod
-    - name: Test
-      run: npm test -- --configuration=ci
-    - name: E2E
-      run: npm run e2e -- --configuration=ci
+    - name: Checkout
+      uses: actions/checkout@v1
+
+    - name: Start DockerFile
+      run: docker build -t frontend .
+
+    - name: Start Docker-compose
+      run: docker-compose up
+
+    - name: Stop docker
+      run: docker-compose down

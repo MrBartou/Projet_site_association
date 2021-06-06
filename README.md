@@ -63,10 +63,27 @@ $ git clone git@github.com:MrBartou/Projet_site_association.git
 # Access
 $ cd Projet_site_association
 
-# Install dependencies
-$ docker-compose up
+# Start the luncher
+$ ./start.sh
 
-# The server will initialize in the <http://localhost:8080>
+# Choose what you want to launch
+```
+
+## :checkered_flag: Modification ##
+
+If you want to modify the code :
+
+```bash
+# Clone this project
+$ git clone git@github.com:MrBartou/Projet_site_association.git
+
+# Access
+$ cd Projet_site_association/frontend
+
+# Start the front
+$ ng serve
+
+# The server will initialize in the <http://localhost:4200>
 ```
 
 ## :memo: License ##
