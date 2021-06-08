@@ -4,25 +4,11 @@
       <h2>Nourriture</h2>
       <hr class="new1">
       <div class="card-deck">
-        <div class="card">
-          <img class="card-img-top" src="{{ this.partener[1].img_abs_path }}" alt="Card image cap">
+        <div class="card" *ngFor="let partenaire of this.partener">
+          <img class="card-img-top" src="{{ partenaire.img_abs_path }}" alt="Card image cap">
           <div class="card-body">
-            <h2 class="card-title">{{ this.partener[1].title }}</h2>
-            <p class="card-text">{{ this.partener[1].description }}</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="{{ this.partener[2].img_abs_path }}" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">{{ this.partener[2].title }}</h2>
-            <p class="card-text">{{ this.partener[2].description }}</p>
-          </div>
-        </div>
-        <div class="card">
-          <img class="card-img-top" src="{{ this.partener[3].img_abs_path }}" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">{{ this.partener[3].title }}</h2>
-            <p class="card-text">{{ this.partener[3].description }}</p>
+            <h2 class="card-title">{{ partenaire.title }}</h2>
+            <p class="card-text">{{ partenaire.description }}</p>
           </div>
         </div>
       </div><br>

@@ -24,6 +24,7 @@
 </mwl-calendar-month-view>
 
 <ng-template #modalContent let-close="close">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="modal-header">
       <h5 class="modal-title">S'inscrire</h5>
       <button type="button" class="close" (click)="close()">
@@ -33,23 +34,23 @@
     <div class="modal-body">
       <mat-horizontal-stepper [linear]="isLinear" #stepper>
         <mat-step [stepControl]="firstFormGroup">
-          <form [formGroup]="firstFormGroup">
+          <form [formGroup]="form">
             <ng-template matStepLabel>Information personnel</ng-template>
             <mat-form-field>
               <mat-label>Prénom</mat-label>
-              <input matInput placeholder="Prénom" formControlName="firstCtrl" required>
+              <input matInput placeholder="Prénom" formControlName="fst_name" required>
             </mat-form-field>
             <mat-form-field>
               <mat-label>Nom</mat-label>
-              <input matInput placeholder="Name" formControlName="firstCtrl" required>
+              <input matInput placeholder="Name" formControlName="snd_name" required>
             </mat-form-field>
             <mat-form-field>
               <mat-label>E-mail</mat-label>
-              <input matInput placeholder="E-mail" formControlName="firstCtrl" required>
+              <input matInput placeholder="E-mail" formControlName="mail" required>
             </mat-form-field>
             <mat-form-field>
               <mat-label>Numéro de télephone</mat-label>
-              <input matInput placeholder="Numéro de télephone" formControlName="firstCtrl" required>
+              <input matInput placeholder="Numéro de télephone" formControlName="phone" required>
             </mat-form-field>
             <div>
               <button mat-button matStepperNext>Next</button>
@@ -57,15 +58,15 @@
           </form>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup" label="Information école">
-          <form [formGroup]="secondFormGroup">
+          <form [formGroup]="form">
             <mat-form-field>
               <mat-label>Ecole</mat-label>
-              <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+              <input matInput formControlName="school" placeholder="Ex. 1 Main St, New York, NY"
                      required>
             </mat-form-field>
             <mat-form-field>
               <mat-label>Promotion</mat-label>
-              <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
+              <input matInput formControlName="promo" placeholder="Ex. 1 Main St, New York, NY"
                      required>
             </mat-form-field>
             <div>
@@ -75,7 +76,7 @@
           </form>
         </mat-step>
         <mat-step [stepControl]="secondFormGroup" label="Paiement">
-          <form [formGroup]="secondFormGroup">
+          <form [formGroup]="form">
             <h3>Prix : 15€</h3>
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="PJM2WY8H648ZK">
@@ -102,10 +103,11 @@
       </mat-horizontal-stepper>
     </div>
     <div class="modal-footer">
-      <button type="button" class="btn btn-outline-secondary" (click)="close()">
+      <button type="submit" class="btn btn-outline-secondary" (click)="close()">
         OK
       </button>
     </div>
+  </form>
   </ng-template>
 <br><br>
 </body>

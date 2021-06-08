@@ -6,21 +6,6 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { ApiService } from 'src/app/api.service';
 
-const colors: any = {
-  red: {
-    primary: '#ad2121',
-    secondary: '#FAE3E3',
-  },
-  blue: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF',
-  },
-  yellow: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA',
-  },
-};
-
 @Component({
   selector: 'app-evenement',
   templateUrl: './evenement.component.html',
@@ -44,6 +29,15 @@ export class EvenementComponent implements OnInit {
     action: string;
     event: CalendarEvent;
   };
+
+  form = this._formBuilder.group({
+    fst_name: "",
+    snd_name: "",
+    mail: "",
+    phone: "",
+    school: "",
+    promo: ""
+  })
 
   actions: CalendarEventAction[] = [
     {
@@ -97,6 +91,7 @@ export class EvenementComponent implements OnInit {
         },
         error => {
           console.log(error);
+          alert("Une erreur est survenue veuillez réessayer");
         }
       )
     }
@@ -144,5 +139,15 @@ export class EvenementComponent implements OnInit {
 
   closeOpenMonthViewDay() {
     this.activeDayIsOpen = false;
+  }
+
+  onSubmit(): void {
+    this.api.postSubscription(this.form.value).subscribe(
+      error => {
+        console.log(error);
+        alert("Une erreur est survenue veuillez réessayer");
+      }
+    );
+    alert("Votre activité a bien été créer");
   }
 }

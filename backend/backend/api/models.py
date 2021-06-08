@@ -36,7 +36,7 @@ class Subsciption(models.Model):
     promo = models.CharField(max_length=4)
     """promotion year of the new subscriber (2025, 2024, etc.)"""
 
-class Admins(models.Model):
+class Administrators(models.Model):
     """Admin class describe what describe an admin"""
     username = models.CharField(max_length=32)
     """admin's username"""

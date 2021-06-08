@@ -24,11 +24,19 @@ export class ApiService {
     return this.http.get(this.baseurl + '/admins/', {headers: this.httpHeaders})
   }
 
-  postSubscription(): Observable<any>{
+  getSubscription(): Observable<any>{
     return this.http.get(this.baseurl + '/subscription/', {headers: this.httpHeaders})
+  }
+
+  postActivity(data: any): Observable<any>{
+    return this.http.post(this.baseurl + '/event/', JSON.stringify(data) , {headers: this.httpHeaders})
   }
 
   deleteEvent(name: string): Observable<any>{
     return this.http.delete(this.baseurl + `/events/${name}`)
+  }
+
+  postSubscription(data: any): Observable<any>{
+    return this.http.post(this.baseurl + '/users/', JSON.stringify(data), {headers: this.httpHeaders})
   }
 }
